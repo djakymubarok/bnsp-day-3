@@ -1,0 +1,226 @@
+#Data-pribadi {
+    position: relative;
+    min-height: 380px;
+    padding-right: 230px;
+}
+
+.foto-cv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 210px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border: none;
+}
+
+
+/* MERAPIKAN TABEL DATA CV */
+#Data-pribadi table,
+#Data-Pendidikan table,
+#Pengalaman-Pekerjaan table,
+#Data-kemampuan table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* MERAPIKAN SETIAP BARIS */
+#Data-pribadi td,
+#Data-Pendidikan td,
+#Pengalaman-Pekerjaan td,
+#Data-kemampuan td {
+    padding: 2px 4px;
+    vertical-align: top;
+    text-align: left;
+    line-height: 1.3;
+}
+
+/* KOLOM PERTAMA */
+#Data-pribadi td:first-child,
+#Data-Pendidikan td:first-child,
+#Data-kemampuan td:first-child {
+    width: 225px;
+}
+
+/* KOLOM KEDUA */
+#Data-pribadi td:nth-child(2),
+#Data-Pendidikan td:nth-child(2),
+#Data-kemampuan td:nth-child(2) {
+    width: auto;
+}
+
+/* AGAR TULISAN PANJANG TIDAK MERUSAK LAYOUT */
+td {
+    overflow-wrap: break-word;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    background-color: #eeeeee;
+    font-family: "Times New Roman", serif;
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+/* KERTAS CV DAN BINGKAI */
+body > center {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1400px;
+    margin: 0 auto;
+    padding: 30px 35px 45px;
+    border: 7px solid #000000;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+
+/* RESPONSIVE TABLET: LAYAR 768px KE BAWAH */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    body > center {
+        width: 100%;
+        min-height: auto;
+        padding: 25px 20px;
+        border-width: 5px;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    /* Menyesuaikan foto dan data pribadi */
+    #Data-pribadi {
+        min-height: 310px;
+        padding-right: 170px;
+    }
+
+    .foto-cv {
+        width: 150px;
+        height: 210px;
+    }
+
+    /* Merapikan kolom tabel */
+    #Data-pribadi td:first-child,
+    #Data-Pendidikan td:first-child,
+    #Data-kemampuan td:first-child {
+        width: 170px;
+    }
+
+    #Data-pribadi td,
+    #Data-Pendidikan td,
+    #Pengalaman-Pekerjaan td,
+    #Data-kemampuan td {
+        padding: 3px;
+        font-size: 15px;
+    }
+}
+
+
+/* RESPONSIVE HP: LAYAR 480px KE BAWAH */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    body > center {
+        width: 100%;
+        min-height: auto;
+        padding: 15px 10px;
+        border-width: 4px;
+    }
+
+    /* Judul utama */
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    /* Judul setiap bagian */
+    h2 {
+        font-size: 21px;
+        padding-bottom: 8px;
+        overflow-wrap: anywhere;
+    }
+
+    h2::after {
+        width: 48%;
+        height: 8px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    /* Foto berada di atas data pribadi */
+    #Data-pribadi {
+        min-height: auto;
+        padding-right: 0;
+    }
+
+    .foto-cv {
+        position: static;
+        display: block;
+        width: 120px;
+        height: 160px;
+        object-fit: cover;
+        margin: 0 auto 18px;
+    }
+
+    /* Tabel menyesuaikan lebar layar */
+    #Data-pribadi table,
+    #Data-Pendidikan table,
+    #Pengalaman-Pekerjaan table,
+    #Data-kemampuan table {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    #Data-pribadi td:first-child,
+    #Data-Pendidikan td:first-child,
+    #Data-kemampuan td:first-child {
+        width: 40%;
+    }
+
+    #Data-pribadi td,
+    #Data-Pendidikan td,
+    #Pengalaman-Pekerjaan td,
+    #Data-kemampuan td {
+        padding: 3px 2px;
+        font-size: 13px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    /* Jarak antarbagian */
+    #Data-pribadi,
+    #Data-Pendidikan,
+    #Pengalaman-Pekerjaan,
+    #Data-kemampuan {
+        margin-bottom: 18px;
+    }
+}
